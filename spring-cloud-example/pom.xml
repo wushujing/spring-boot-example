@@ -16,6 +16,8 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>cloud-config-server</module>
+		<module>cloud-eureka-server</module>
+		<module>cloud-simple-service</module>
 	</modules>
 
 	<repositories>
