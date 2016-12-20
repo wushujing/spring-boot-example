@@ -2,7 +2,8 @@ package com.github.wushujing.cloud.simple.web;
 
 import com.github.wushujing.cloud.simple.model.User;
 import com.github.wushujing.cloud.simple.service.UserService;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -17,7 +18,7 @@ public class SimpleController {
 	@Resource
 	private UserService userService;
 
-	@GetMapping(value = "/user")
+	@RequestMapping(value = "/user", method = RequestMethod.GET)
 	public List<User> getAllUser() {
 		return userService.getAll();
 	}
